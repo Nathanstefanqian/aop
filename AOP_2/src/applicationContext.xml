@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 将指定类TestDIDaoImpl配置给Spring，让Spring创建其实例 -->
+	<bean id="testDao" class="dao.TestDaoImpl" />
+	<!-- 使用setter方法注入 -->
+	<bean id="JDKDynamicProxy" class="service.JDKDynamicProxy">
+	</bean>
+	
+</beans>

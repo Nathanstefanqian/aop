@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- com.dao.UserDao对应Dao接口 -->
+<mapper namespace="com.dao.AppleDao">
+	<!-- 查询所有用户信息 -->
+	<select id="selectAllApple"  resultType="com.po.MyApple">
+		select * from apple
+	</select>
+	<!-- 添加一个用户 ，#{aplace}为com.po.MyApple的属性值-->
+	<insert id="addApple" parameterType="com.po.MyApple">
+		insert into apple (aplace,aweight,aprice) values(#{aplace},#{aweight},#{aprice})
+	</insert>
+</mapper>
